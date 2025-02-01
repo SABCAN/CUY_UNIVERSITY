@@ -9,23 +9,28 @@ print(f"** {welcome_message} **")
 print("******************************")
 
 nama_user = input("Masukan Nama : ")
-print(f'''Hello {nama_user}! Cobalah kamu perhatikan Goa Di bawah ini 
+
+if nama_user.isdigit():
+  print("Masukan inputan nama bukan angka")
+
+else:
+  print(f'''Hello {nama_user}! Cobalah kamu perhatikan Goa Di bawah ini 
 |_| |_| |_| |_|
 ''')
 
-pilihan = int(input('Menurut kamu di Goa nomor berapa CUPY berada ? [1 / 2 / 3 / 4] : '))
+  pilihan = int(input('Menurut kamu di Goa nomor berapa CUPY berada ? [1 / 2 / 3 / 4] : '))
 
-print(f'Plihan Kamu adalah {pilihan}')
+  print(f'Plihan Kamu adalah {pilihan}')
 
-pilihan_2 = str(input(f"Apakah Kamu Yakin atas Jawaban kamu {pilihan} ? [y/n] : "))
+  pilihan_2 = str(input(f"Apakah Kamu Yakin atas Jawaban kamu {pilihan} ? [y/n] : "))
 
-if(pilihan_2 == 'y'):
-  if pilihan == Cupy_position:
-    print(f"SELAMAT {nama_user} MENANG! posisi CUYPY di goa nomor  {Cupy_position} dan kamu memilih goa nomor {pilihan}")
+  if(pilihan_2 == 'y'):
+    if pilihan == Cupy_position:
+      print(f"SELAMAT {nama_user} MENANG! posisi CUYPY di goa nomor  {Cupy_position} dan kamu memilih goa nomor {pilihan}")
+    else:
+      print(f"KAMU KALAH CUYPUY tidak ada di goa nomor{pilihan}, tetapi CUYPUY berada di goa nomor {Cupy_position}")
   else:
-    print(f"KAMU KALAH CUYPUY tidak ada di goa nomor{pilihan}, tetapi CUYPUY berada di goa nomor {Cupy_position}")
-else:
-  print("Kamu Takut yah hehehehe")
+    print("Kamu Takut yah hehehehe")
 
 
 
